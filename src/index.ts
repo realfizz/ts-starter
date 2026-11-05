@@ -1,3 +1,4 @@
-import "@/env.ts";
+import { env } from "@/env.ts";
+import { log } from "@/logger.ts";
 
-console.log("Hello via Bun!");
+log.info({ message: "started", port: env.PORT });
