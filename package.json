@@ -1,19 +1,36 @@
 {
   "name": "ts-starter",
-  "module": "index.ts",
-  "type": "module",
   "private": true,
+  "type": "module",
+  "module": "src/index.ts",
   "scripts": {
-    "typecheck": "bun check"
-  },
-  "devDependencies": {
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^7"
+    "dev": "bun --hot src/index.ts",
+    "start": "bun src/index.ts",
+    "typecheck": "bun check",
+    "lint": "ultracite check",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
+    "fix": "ultracite fix",
+    "prepare": "lefthook install"
   },
   "dependencies": {
     "@t3-oss/env-core": "^0.13.11",
     "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@oxlint/plugins": "1.91.0",
+    "@types/bun": "latest",
+    "eslint-plugin-github": "6.1.2",
+    "eslint-plugin-jsdoc": "^65.4.2",
+    "eslint-plugin-sonarjs": "^4.2.2",
+    "eslint-plugin-tsdoc": "^0.5.4",
+    "lefthook": "^2.2.2",
+    "oxfmt": "^0.75.0",
+    "oxlint": "^1.90.0",
+    "oxlint-tsgolint": "^7.0.2005",
+    "ultracite": "8.1.1"
+  },
+  "peerDependencies": {
+    "typescript": "^7"
   }
 }

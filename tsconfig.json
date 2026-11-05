@@ -17,14 +17,19 @@
 
     // Best practices
     "strict": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitReturns": true,
     "skipLibCheck": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noPropertyAccessFromIndexSignature": true,
 
-    // Some stricter flags (disabled by default)
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "noPropertyAccessFromIndexSignature": false
-  }
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "exclude": ["tools/oxlint/anti-slop"]
 }
